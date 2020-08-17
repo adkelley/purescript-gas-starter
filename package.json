@@ -13,7 +13,8 @@
     "clasp:create": "clasp create --rootDir ./dist && yarn move",
     "build": "yarn bundle && rimraf dist && webpack --mode production && yarn copy",
     "push": "clasp push",
-    "watch": "watch 'yarn push' dist/"
+    "watch:dist": "watch 'yarn push' dist/",
+	"watch:src": "spago build --watch"
   },
   "devDependencies": {
     "clasp": "^1.0.0",
