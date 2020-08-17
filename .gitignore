@@ -1,0 +1,14 @@
+/bower_components/
+/node_modules/
+/.pulp-cache/
+/output/
+/dist/
+/generated-docs/
+/.psc-package/
+/.clasp.json
+/.psc*
+/.purs*
+/.psa*
+/.spago
+bundle/index.js
+yarn-error.log
