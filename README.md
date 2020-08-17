@@ -28,11 +28,11 @@ Once you're comfortable with the build process, then reset the project `yarn cla
 - [purescript-google-appsscript](https://github.com/adkelley/purescript-google-appsscript)
 
 ## How it works
-Within the build script (i.e., `yarn build`), `spago` creates a single, dead-code-eliminated JS module, `index.js`,  from your PureScript source files and places it in in the `bundle` directory.  This script then uses `webpack` to bundle the assets, `bundle/main.js` and `bundle/index.js` together into `Code.gs`, and places into the `dist` directory.   Finally, `webpack` places a copy of `appscript.json`, created during `clasp create`, from the `src` directory into the `dist` directory.   These files can be pushed to `script.google.com` using the script `yarn push`.
+Within the build script (i.e., `yarn build`), `spago` creates a single, dead-code-eliminated JS module, `index.js`,  from your PureScript source files and places it in in the `bundle` directory.  This script then uses `webpack` to bundle the assets, `bundle/main.js` and `bundle/index.js` together into `Code.gs`, and places into the `dist` directory.   Finally, the build script places a copy of `appscript.json`, created during `clasp create`, from the `src` directory into the `dist` directory.   These files can be pushed to `script.google.com` using the script `yarn push`.
 
 The purpose of `bundle/main.js` is to `require` `main` from `index.js`.  Google Apps Script requires this top-level function declaration as an entry point for [google.script.run](https://developers.google.com/apps-script/guides/html/reference/run).  Therefore do not delete it.
 
 ## License
-This software is released under the MIT License, see 'License.txt'.
+This software is released under the MIT License, see 'License'.
 
 
