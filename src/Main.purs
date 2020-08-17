@@ -9,12 +9,16 @@ import Google.AppsScript.SpreadsheetApp
   , getRange
   , getValue
   )
-import Foreign (unsafeFromForeign)
+import Foreign (Foreign, unsafeFromForeign)
+import Effect (Effect)
 import Effect.Console (log)
 
-main :: GASEff Unit
+
+getValueFromRange :: String -> GASEff Foreign
+getValueFromRange range = 
+  app >>= getActiveSheet >>= getRange range >>= getValue
+  
+main :: Effect Unit
 main = do
-  sheet <- app >>= getActiveSheet
-  range <- getRange "A1" sheet
-  address <- getValue range
-  log $ unsafeFromForeign address
+  --value <- getValueFromRange "A1"
+  getValueFromRange "A1" >>= \x -> log $ unsafeFromForeign x

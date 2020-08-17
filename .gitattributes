@@ -1,0 +1,2 @@
+*.dhall linguist-detectable=false
+*.purs linguist-detectable=true

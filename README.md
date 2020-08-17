@@ -3,14 +3,14 @@ A Template for new Google Apps Script Projects using PureScript
 
 ## Prerequisites
 You should have already downloaded the tools needed to start a new
-project in PureScript.  You will at least need the build tool and package manager, [spago](https://github.com/purescript/spago) and the purescript compiler [purs](https://github.com/purescript/purescript). 
+project in PureScript.  You will at least need the build tool and package manager, [spago](https://github.com/purescript/spago) and the purescript compiler [purs](https://github.com/purescript/purescript). See [Recommended tooling for PureScript in 2020](https://discourse.purescript.org/t/recommended-tooling-for-purescript-in-2020/1615)
 
-You should know and understand how to create and run a Google Apps Script. If you haven't built a Google Apps Script, then stop here and go through Google's official [tutorials](https://developers.google.com/apps-script/articles/tutorials).  I also highly recommend the video tutorial [series](https://www.youtube.com/watch?v=aPJ-2U45BpA&list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw) from 'Learn Google Spreadsheets'.
+You should know and understand how to create and run a Google Apps Script. If you haven't built a Google Apps Script before, then stop here and go through Google's official [tutorials](https://developers.google.com/apps-script/articles/tutorials).  I also highly recommend the video tutorial [series](https://www.youtube.com/watch?v=aPJ-2U45BpA&list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw) from 'Learn Google Spreadsheets'.
 
 ## Getting Started
-If this is your first time using this template, then I suggest you try building it using the default source files, which reads a cell 'A1' from an active Google Spreadsheetand logs its value to the console. This way you can be confident that you understand the steps necessary to build and run a script using Google's command line interface [cllasp](https://developers.google.com/apps-script/guides/clasp). 
+If this is your first time using this template, then I suggest you try building it using the default source files. This way you can be confident that you understand the steps necessary to build and run a script using Google's command line interface [cllasp](https://developers.google.com/apps-script/guides/clasp). The source file, `Main.purs` reads a cell 'A1' from an active Google Spreadsheet and logs its value to the console. 
 
-Once you've satisfied the prerequisites above then first, check out the `package.json` scripts to better understand what's happening during the following steps:
+Once you've satisfied the prerequisites above then be sure to check out the `package.json` scripts to better understand what's happening during the following steps:
 
 1. Install the dependencies: `yarn install && spago install`
 2. Login into clasp: `npx clasp login`
