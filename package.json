@@ -8,7 +8,7 @@
     "clean": "rimraf dist node_modules output .spago",
     "copy": "cp src/appsscript.json dist/",
 	"move": "mv dist/appsscript.json src/",
-	"bundle": "spago bundle-module --main Main --to bundle/index.js",
+	"bundle": "spago bundle-module --main Main --to src/javascript/index.js",
 	"clasp:reset": "rm .clasp.json src/appsscript.json",
     "clasp:create": "clasp create --rootDir ./dist && yarn move",
     "build": "yarn bundle && rimraf dist && webpack --mode production && yarn copy",
