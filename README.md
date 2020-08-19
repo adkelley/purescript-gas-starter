@@ -28,9 +28,9 @@ Once you're comfortable with the build process, then reset the project `yarn cla
 - [purescript-google-appsscript](https://github.com/adkelley/purescript-google-appsscript)
 
 ## How it works
-Within the build script (i.e., `yarn build`), `spago` creates a single, dead-code-eliminated JS module, `index.js`,  from your PureScript source files and places it in in the `src/javascript` directory.  This script then uses `webpack` to bundle the assets, `javascript/main.js` and `javascript/index.js` together into `Code.gs`, and places into the `dist` directory.   Finally, the build script places a copy of `appscript.json` (created during `clasp create`) from the `src` directory into the `dist` directory.   These files can be pushed to `script.google.com` using the script `yarn push`.
+Within the build script (i.e., `yarn build`), `spago` creates a single, dead-code-eliminated JS module, `main.js`,  from your PureScript source files and places it in in the `src/javascript` directory.  This script then uses `webpack` to bundle the assets, `javascript/main.js` and `javascript/index.js` together into `Code.gs`, and places into the `dist` directory.   Finally, the build script places a copy of `appscript.json` (created during `clasp create`) from the `src` directory into the `dist` directory.   These files can be pushed to `script.google.com` using the script `yarn push`.
 
-The purpose of `src/javascript/main.js` is to `require` `main` from the `index.js` file.  Google Apps Script requires this top-level function declaration as an entry point for [google.script.run](https://developers.google.com/apps-script/guides/html/reference/run).
+The purpose of `src/javascript/index.js` is to `require` `main` from the `main.js` file.  Google Apps Script requires this top-level function declaration as an entry point for [google.script.run](https://developers.google.com/apps-script/guides/html/reference/run).
 
 
 ## PureScript / JavaScript interop

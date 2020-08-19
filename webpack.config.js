@@ -5,7 +5,7 @@ const dist = path.resolve(__dirname, 'dist');
 
 module.exports = {
 	context: __dirname,
-	entry: `${src}/main.js`,
+	entry: `${src}/index.js`,
 	output: {
 		path: `${dist}`,
 		filename: 'Code.gs'
