@@ -5,12 +5,12 @@
   "author": "Alex Kelley <https://github.com/adkelley",
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf dist node_modules output .psc* .purs* .psa* .spago",
-    "copy": "cp dist/appsscript.json src/",
+    "clean": "rimraf dist node_modules output .clasp.json .psc* .purs* .psa* .spago",
+    "copy": "cp src/appsscript.json dist/appsscript.json",
     "bundle": "spago bundle-module --main Main --to src/javascript/main.js",
     "clasp:reset": "rimraf .clasp.json src/appsscript.json",
     "clasp:create": "clasp create --rootDir ./dist && npm run copy",
-    "build": "npm run bundle && rimraf dist && webpack --mode production",
+    "build": "npm run bundle && rimraf dist && webpack --mode production && npm run copy",
     "push": "clasp push",
     "watch:dist": "watch 'npm run push' dist/",
     "watch:ps": "spago build --watch"
