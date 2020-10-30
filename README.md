@@ -15,9 +15,10 @@ Once you've satisfied the prerequisites above, check out the `package.json` scri
 1. Install the dependencies: `npm install && spago install`
 2. Login into clasp: `npx clasp login`
 3. Create a new apps script project: `npm run clasp:create` and select `sheets`
-4. Build the bundle `npm run build`
-5. Upload the script project `npm run push`
-6. Go to your Google Drive, and you should see a new spreadsheet named `Purescript-gas-starter`.  Add some text to the first cell 'A1', then open the script editor and run `main`.  Check the Logs (View -> Logs), and you should see your text.
+4. Change the timeZone key in `src/appsscript.json` to your local time zone
+5. Build the bundle `npm run build`
+6. Upload the script project `npm run push`
+7. Go to your Google Drive, and you should see a new spreadsheet named `Purescript-gas-starter`.  Add some text to the first cell 'A1', then open the script editor and run `main`.  Check the Logs (View -> Logs), and you should see your text.
 
 Once you're comfortable with the build process, then reset the project `npm run clasp:reset`, modify the `Main.purs`, and create a new Apps Script project `npm run clasp:create`
 
