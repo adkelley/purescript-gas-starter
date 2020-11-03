@@ -10,5 +10,6 @@
 /.purs*
 /.psa*
 /.spago
+src/javascript/*
 bundle/index.js
 yarn-error.log

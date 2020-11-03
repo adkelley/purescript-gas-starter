@@ -5,7 +5,7 @@
   "author": "Alex Kelley <https://github.com/adkelley",
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf dist node_modules output .clasp.json .psc* .purs* .psa* .spago",
+    "clean": "rimraf dist node_modules src/javascript/* output .clasp.json .psc* .purs* .psa* .spago",
     "copy": "cp src/appsscript.json dist/appsscript.json",
     "bundle": "spago bundle-module --main Main --to src/javascript/main.js",
     "clasp:reset": "rimraf .clasp.json src/appsscript.json",
@@ -20,6 +20,7 @@
     "copy-webpack-plugin": "^6.0.3",
     "gas-webpack-plugin": "^1.0.4",
     "purescript": "^0.13.8",
+    "purty": "^6.2.0",
     "spago": "^0.17.0",
     "watch": "^1.0.2",
     "webpack": "^4.44.1",
