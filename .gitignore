@@ -11,4 +11,5 @@
 /.psa*
 /.spago
 bundle/index.js
+src/javascript/main.js
 yarn-error.log
