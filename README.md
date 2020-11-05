@@ -3,7 +3,7 @@ A Template for new Google Apps Script Projects using PureScript
 
 ## Prerequisites
 You should have already downloaded the tools needed to start a new
-project in PureScript.  You will at least need the build tool and package manager, [spago](https://github.com/purescript/spago), and the purescript compiler [purs](https://github.com/purescript/purescript). See [Recommended tooling for PureScript in 2020](https://discourse.purescript.org/t/recommended-tooling-for-purescript-in-2020/1615)
+project in PureScript.  You will at least need the build tool and package manager, [spago](https://github.com/purescript/spago), and the purescript compiler [purs](https://github.com/purescript/purescript). I've also included [purty](https://www.npmjs.com/package/purty) for formatting `*.purs` files.  See [Recommended tooling for PureScript in 2020](https://discourse.purescript.org/t/recommended-tooling-for-purescript-in-2020/1615)
 
 You should know and understand how to create and run a Google Apps Script. If you haven't built a Google Apps Script before, then stop here and go through Google's official [tutorials](https://developers.google.com/apps-script/articles/tutorials).  Then, I also highly recommend you work through the video tutorial [series](https://www.youtube.com/watch?v=aPJ-2U45BpA&list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw) from 'Learn Google Spreadsheets'.
 
@@ -14,8 +14,8 @@ Once you've satisfied the prerequisites above, check out the `package.json` scri
 
 1. Install the dependencies: `npm install && spago install`
 2. Login into clasp: `npx clasp login`
-3. Create a new apps script project: `npm run clasp:create` and select `sheets`
-4. Change the timeZone key in `src/appsscript.json` to your local time zone
+3. Change the `timeZone` key in `src/appsscript.json` to your local time zone
+4. Create a new apps script project: `npm run clasp:create` and select `sheets`
 5. Build the bundle `npm run build`
 6. Upload the script project `npm run push`
 7. Go to your Google Drive, and you should see a new spreadsheet named `Purescript-gas-starter`.  Add some text to the first cell 'A1', then open the script editor and run `main`.  Check the Logs (View -> Logs), and you should see your text.
