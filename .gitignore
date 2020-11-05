@@ -10,7 +10,4 @@
 /.purs*
 /.psa*
 /.spago
-src/javascript/*.js
-bundle/index.js
 src/javascript/main.js
-yarn-error.log
